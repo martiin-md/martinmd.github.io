@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "91126121428",
+    "project_id": "soundstation-b3b23",
+    "storage_bucket": "soundstation-b3b23.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91126121428:android:de3dee6fdd86f9b027cc41",
+        "android_client_info": {
+          "package_name": "com.example.soundstation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpCF4a4HWEZihyDF01icC2UURAx8c6v_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
