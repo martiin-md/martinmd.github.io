@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx0ji7nd4uol8"]
+
+[sub_resource type="GDScript" id="GDScript_li6np"]
+script/source = "extends Control
+
+var score: int = 0  # Contador de puntos
+
+@onready var label_score = $LabelScore  # Asegúrate de que hay un Label llamado \"LabelScore\"
+
+func _ready() -> void:
+	update_score()
+
+func increase_score(amount: int = 1) -> void:
+	score += amount
+	update_score()
+
+func reset_score() -> void:
+	score = 0
+	update_score()
+
+func update_score() -> void:
+	label_score.text = \"Puntos: \" + str(score)
+"
+
+[sub_resource type="LabelSettings" id="LabelSettings_h8smr"]
+font_size = 70
+
+[node name="Contador" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_li6np")
+
+[node name="LabelScore" type="Label" parent="."]
+layout_mode = 0
+offset_right = 124.0
+offset_bottom = 96.0
+text = "000"
+label_settings = SubResource("LabelSettings_h8smr")

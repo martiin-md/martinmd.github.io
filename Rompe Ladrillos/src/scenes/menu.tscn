@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://b563vdyvk6hrc"]
+
+[ext_resource type="Script" path="res://src/scripts/menu.gd" id="1_m4hhb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlo30"]
+bg_color = Color(0, 0.715987, 0.400304, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujfdh"]
+bg_color = Color(0.756863, 0.054902, 0.117647, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yyv4d"]
+font_size = 54
+
+[sub_resource type="LabelSettings" id="LabelSettings_3om2k"]
+font_size = 54
+outline_size = 1
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m4hhb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 403.0
+offset_top = -5.0
+offset_right = 900.0
+offset_bottom = 720.0
+color = Color(0.273873, 0.273873, 0.273873, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 504.0
+offset_top = 379.0
+offset_right = 812.0
+offset_bottom = 449.0
+alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_xlo30")
+text = "PLAY
+"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ujfdh")
+text = "SALIR"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 281.0
+offset_right = 740.0
+offset_bottom = 355.0
+text = "MENU"
+label_settings = SubResource("LabelSettings_yyv4d")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 171.0
+offset_right = 838.0
+offset_bottom = 245.0
+text = "¡BIENVENIDO!"
+label_settings = SubResource("LabelSettings_3om2k")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_jugar_pressed"]
