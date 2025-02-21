@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=3 uid="uid://b563vdyvk6hrc"]
+
+[ext_resource type="Script" path="res://src/scripts/menu.gd" id="1_m4hhb"]
+[ext_resource type="VideoStream" path="res://src/assents/fondoespacial.ogv" id="2_rq7rb"]
+[ext_resource type="Texture2D" uid="uid://c66qwujwb2mnm" path="res://src/assents/settings-98446_1920.png" id="3_in1ep"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlo30"]
+bg_color = Color(0, 0.715987, 0.400304, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujfdh"]
+bg_color = Color(0.756863, 0.054902, 0.117647, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3om2k"]
+font_size = 54
+outline_size = 1
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 3.0
+offset_right = 1269.0
+offset_bottom = 718.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m4hhb")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -20.0
+offset_right = 24.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_rq7rb")
+autoplay = true
+expand = true
+loop = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 1281.0
+offset_bottom = 724.0
+color = Color(0.273873, 0.273873, 0.273873, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 504.0
+offset_top = 379.0
+offset_right = 812.0
+offset_bottom = 449.0
+alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xlo30")
+text = "PLAY
+"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ujfdh")
+text = "SALIR"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 232.0
+offset_right = 842.0
+offset_bottom = 306.0
+text = "¡BIENVENIDO!"
+label_settings = SubResource("LabelSettings_3om2k")
+horizontal_alignment = 1
+
+[node name="ajustes" type="TouchScreenButton" parent="."]
+position = Vector2(1177, 11)
+scale = Vector2(0.0381216, 0.0359375)
+texture_normal = ExtResource("3_in1ep")
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_jugar_pressed"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dovuam23aodk1"]
+
+[ext_resource type="Script" path="res://src/scripts/vidas.gd" id="1_hbo83"]
+[ext_resource type="Texture2D" uid="uid://cnjk0dh25y0ev" path="res://src/assents/heart-icon_34407.png" id="1_uv8hn"]
+
+[node name="Vidas" type="Node2D"]
+script = ExtResource("1_hbo83")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 254.0
+offset_bottom = 74.0
+
+[node name="Vida1" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(53, 38)
+scale = Vector2(0.132812, 0.12207)
+texture = ExtResource("1_uv8hn")
+
+[node name="Vida2" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(208, 37)
+scale = Vector2(0.127, 0.133)
+texture = ExtResource("1_uv8hn")
+
+[node name="Vida3" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(129.5, 37.75)
+scale = Vector2(0.126953, 0.129883)
+texture = ExtResource("1_uv8hn")

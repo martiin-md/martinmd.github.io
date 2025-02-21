@@ -1,0 +1,129 @@
+[gd_scene load_steps=8 format=3 uid="uid://2dacxyofj0j5"]
+
+[ext_resource type="Script" path="res://src/scripts/controles.gd" id="1_2iiow"]
+[ext_resource type="VideoStream" path="res://src/assents/fondoespacial.ogv" id="1_p0kje"]
+[ext_resource type="Texture2D" uid="uid://cng3ybj1u1xnq" path="res://src/assents/controlador/Sprites/flat-light/flatLight22.png" id="2_yj4og"]
+[ext_resource type="Texture2D" uid="uid://yfmhr3oh65ox" path="res://src/assents/controlador/Sprites/flat-light/flatLight23.png" id="3_yfj6e"]
+[ext_resource type="Texture2D" uid="uid://puc614rf26im" path="res://src/assents/Controllers/addons/controller_icons/assets/key/arrow_left.png" id="4_5o1pd"]
+[ext_resource type="Texture2D" uid="uid://bbjc54bmpv3f8" path="res://src/assents/Controllers/addons/controller_icons/assets/key/arrow_right.png" id="5_8a2fg"]
+[ext_resource type="Texture2D" uid="uid://coqj2fcsaxvcn" path="res://src/assents/Controllers/addons/controller_icons/assets/key/space.png" id="6_c2nmv"]
+
+[node name="controles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2iiow")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -20.0
+offset_right = 24.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_p0kje")
+autoplay = true
+expand = true
+loop = true
+
+[node name="atras" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(10, 3)
+texture_normal = ExtResource("2_yj4og")
+
+[node name="titulo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 118.0
+offset_right = 797.0
+offset_bottom = 187.0
+theme_override_font_sizes/font_size = 50
+text = "CONTROLES
+"
+
+[node name="izquierda" type="Label" parent="."]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 348.0
+offset_right = 944.0
+offset_bottom = 375.0
+text = "Izquieda"
+
+[node name="derecha" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 350.0
+offset_right = 1105.0
+offset_bottom = 373.0
+text = "Derecha"
+
+[node name="izquierdaImg" type="TouchScreenButton" parent="."]
+position = Vector2(880, 382)
+scale = Vector2(0.825, 0.725)
+texture_normal = ExtResource("2_yj4og")
+
+[node name="DerechaImg" type="TouchScreenButton" parent="."]
+position = Vector2(1042, 382)
+scale = Vector2(0.825, 0.725)
+texture_normal = ExtResource("3_yfj6e")
+
+[node name="labelMóvil" type="Label" parent="."]
+layout_mode = 0
+offset_left = 956.0
+offset_top = 282.0
+offset_right = 1030.0
+offset_bottom = 311.0
+theme_override_font_sizes/font_size = 20
+text = "Móviles"
+
+[node name="izquierda2" type="Label" parent="."]
+offset_left = 228.0
+offset_top = 350.0
+offset_right = 294.0
+offset_bottom = 377.0
+text = "Izquieda"
+
+[node name="derecha2" type="Label" parent="."]
+offset_left = 390.0
+offset_top = 352.0
+offset_right = 455.0
+offset_bottom = 375.0
+text = "Derecha"
+
+[node name="izquierdaImg2" type="TouchScreenButton" parent="."]
+position = Vector2(220, 384)
+scale = Vector2(0.825, 0.725)
+texture_normal = ExtResource("4_5o1pd")
+
+[node name="DerechaImg2" type="TouchScreenButton" parent="."]
+position = Vector2(382, 383)
+scale = Vector2(0.825, 0.725)
+texture_normal = ExtResource("5_8a2fg")
+
+[node name="labelPC" type="Label" parent="."]
+offset_left = 328.0
+offset_top = 288.0
+offset_right = 354.0
+offset_bottom = 317.0
+theme_override_font_sizes/font_size = 20
+text = "PC"
+
+[node name="reiniciar" type="Label" parent="."]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 460.0
+offset_right = 373.0
+offset_bottom = 486.0
+text = "Reiniciar"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(287, 461)
+texture_normal = ExtResource("6_c2nmv")

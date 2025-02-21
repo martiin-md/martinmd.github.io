@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3rt6c7scri5s"]
+
+[ext_resource type="Script" path="res://src/scripts/settings_menu.gd" id="1_1k4f8"]
+[ext_resource type="VideoStream" path="res://src/assents/fondoespacial.ogv" id="2_g1lpx"]
+[ext_resource type="AudioStream" uid="uid://dj3wims3u57y0" path="res://src/sonidos/Bittersweet_Anthem_BGM_CC-BY.mp3" id="2_j06f3"]
+[ext_resource type="Texture2D" uid="uid://cng3ybj1u1xnq" path="res://src/assents/controlador/Sprites/flat-light/flatLight22.png" id="4_p2g77"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fe2ce"]
+bg_color = Color(0.111, 0.218917, 0.37, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cuy0"]
+bg_color = Color(0.769465, 0.558882, 0.066151, 1)
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1k4f8")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -20.0
+offset_right = 24.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_g1lpx")
+autoplay = true
+expand = true
+loop = true
+
+[node name="atras" type="Button" parent="."]
+layout_mode = 0
+offset_right = 88.0
+offset_bottom = 88.0
+icon = ExtResource("4_p2g77")
+flat = true
+
+[node name="VolumenLabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 370.0
+offset_top = 301.0
+offset_right = 450.0
+offset_bottom = 324.0
+text = "VOLUMEN
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 305.0
+offset_right = 824.0
+offset_bottom = 391.0
+
+[node name="Volumen" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/Volumen"]
+stream = ExtResource("2_j06f3")
+
+[node name="Controlador" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_fe2ce")
+text = "CONTROLES"
+
+[node name="Creditos" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_4cuy0")
+text = "CREDITOS
+"

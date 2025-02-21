@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://uaj1881d184e"]
+
+[ext_resource type="AudioStream" uid="uid://dj3wims3u57y0" path="res://src/sonidos/Bittersweet_Anthem_BGM_CC-BY.mp3" id="1_h5c6p"]
+
+[node name="Sonido" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_h5c6p")

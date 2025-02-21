@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgupjay32rlqh"]
+
+[ext_resource type="Script" path="res://src/scripts/controlador_virtual.gd" id="1_jjhgs"]
+[ext_resource type="Texture2D" uid="uid://cng3ybj1u1xnq" path="res://src/assents/controlador/Sprites/flat-light/flatLight22.png" id="2_nchev"]
+[ext_resource type="Texture2D" uid="uid://yfmhr3oh65ox" path="res://src/assents/controlador/Sprites/flat-light/flatLight23.png" id="3_vjvj5"]
+
+[node name="ControladorVirtual" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -3.0
+offset_right = -943.0
+offset_bottom = -561.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jjhgs")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+texture_filter = 1
+scale = Vector2(1.525, 1.375)
+texture_normal = ExtResource("2_nchev")
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(141, 0)
+scale = Vector2(1.55, 1.35)
+texture_normal = ExtResource("3_vjvj5")
