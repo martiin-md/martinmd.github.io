@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 500.0
+const SPEED = 430.0
 	
 func start():
 	velocity = Vector2.DOWN * SPEED

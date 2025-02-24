@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=3 uid="uid://ca1xc0uri7l8p"]
+
+[ext_resource type="FontFile" uid="uid://6ohc1sy557xe" path="res://src/assents/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="1_47qbg"]
+[ext_resource type="VideoStream" path="res://src/assents/fondoespacial.ogv" id="1_67p4u"]
+[ext_resource type="Script" path="res://src/scripts/pausa.gd" id="1_d62tp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxn38"]
+bg_color = Color(0.230369, 0.697383, 0.48429, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mir8k"]
+bg_color = Color(0, 0, 0.52, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fy7mi"]
+bg_color = Color(0.6, 0.114, 0.114, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m5t66"]
+font = ExtResource("1_47qbg")
+font_size = 40
+
+[node name="pausa" type="Control"]
+process_mode = 3
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d62tp")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -20.0
+offset_right = 24.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_67p4u")
+autoplay = true
+expand = true
+loop = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 254.0
+offset_right = 839.0
+offset_bottom = 409.0
+
+[node name="reanudar" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_dxn38")
+text = "REANUDAR"
+
+[node name="ajustes" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_mir8k")
+text = "AJUSTES"
+
+[node name="salir" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_fy7mi")
+text = "SALIR"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 142.0
+offset_right = 737.0
+offset_bottom = 212.0
+text = "PAUSA"
+label_settings = SubResource("LabelSettings_m5t66")
+horizontal_alignment = 1

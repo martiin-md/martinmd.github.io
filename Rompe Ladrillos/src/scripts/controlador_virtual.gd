@@ -1,9 +1,9 @@
 extends Node
 
-@onready var paddle = get_parent().get_node("PadlePlayer")  # Ajusta el nombre si es diferente
+@onready var paddle = get_parent().get_node("PadlePlayer")
 
 func _ready():
-	# Conectar señales de los botones
+	# Conexión de señales de los botones
 	$"TouchScreenButton".connect("pressed", Callable(self, "_on_left_pressed"))
 	$"TouchScreenButton".connect("released", Callable(self, "_on_left_released"))
 

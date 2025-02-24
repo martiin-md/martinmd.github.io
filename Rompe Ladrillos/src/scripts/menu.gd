@@ -17,10 +17,10 @@ func _on_start_button_pressed() -> void:
 
 func _on_exit_button_pressed() -> void:
 	get_tree().quit()  # Cierra el juego
-# En tu menú principal
+# En el menú principal
 func _on_settings_button_pressed() -> void:
 	# Cargar la escena de ajustes
 	var settings_scene = preload("res://src/escenas/settings_menu.tscn")
 	var settings_instance = settings_scene.instance()
-	get_tree().current_scene.add_child(settings_instance)  # Agregar la escena de ajustes
-	settings_instance.rect_position = Vector2(100, 100)  # Opcional: posición inicial de la escena
+	get_tree().current_scene.add_child(settings_instance)  # Se agrega la escena de ajustes
+	settings_instance.rect_position = Vector2(100, 100)  # posición inicial de la escena

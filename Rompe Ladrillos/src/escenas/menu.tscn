@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b563vdyvk6hrc"]
+[gd_scene load_steps=8 format=3 uid="uid://b563vdyvk6hrc"]
 
 [ext_resource type="Script" path="res://src/scripts/menu.gd" id="1_m4hhb"]
 [ext_resource type="VideoStream" path="res://src/assents/fondoespacial.ogv" id="2_rq7rb"]
+[ext_resource type="FontFile" uid="uid://6ohc1sy557xe" path="res://src/assents/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="3_3wq7f"]
 [ext_resource type="Texture2D" uid="uid://c66qwujwb2mnm" path="res://src/assents/settings-98446_1920.png" id="3_in1ep"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlo30"]
@@ -11,6 +12,7 @@ bg_color = Color(0, 0.715987, 0.400304, 1)
 bg_color = Color(0.756863, 0.054902, 0.117647, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3om2k"]
+font = ExtResource("3_3wq7f")
 font_size = 54
 outline_size = 1
 

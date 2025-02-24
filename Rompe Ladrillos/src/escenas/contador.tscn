@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bx0ji7nd4uol8"]
+[gd_scene load_steps=4 format=3 uid="uid://bx0ji7nd4uol8"]
+
+[ext_resource type="FontFile" uid="uid://6ohc1sy557xe" path="res://src/assents/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="1_ufccu"]
 
 [sub_resource type="GDScript" id="GDScript_li6np"]
 script/source = "extends Control
@@ -23,6 +25,7 @@ func update_score() -> void:
 "
 
 [sub_resource type="LabelSettings" id="LabelSettings_h8smr"]
+font = ExtResource("1_ufccu")
 font_size = 70
 
 [node name="Contador" type="Control"]

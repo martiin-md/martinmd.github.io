@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cbhorjjuqgkxe"]
+[gd_scene load_steps=20 format=3 uid="uid://cbhorjjuqgkxe"]
 
 [ext_resource type="Script" path="res://src/scripts/main.gd" id="1_n6o76"]
 [ext_resource type="PackedScene" uid="uid://bkh8gsengvq2p" path="res://src/escenas/padle_player.tscn" id="1_v77jv"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bgupjay32rlqh" path="res://src/escenas/ControladorVirtual.tscn" id="9_s0d4c"]
 [ext_resource type="Texture2D" uid="uid://c66qwujwb2mnm" path="res://src/assents/settings-98446_1920.png" id="12_invd5"]
 [ext_resource type="Texture2D" uid="uid://bsclo1tjnvaep" path="res://src/assents/arrow-23284_1920.png" id="13_2atpr"]
+[ext_resource type="Texture2D" uid="uid://cvgglvkqn642m" path="res://src/assents/blue-308748_1920.png" id="14_33gox"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2qo4l"]
 texture = ExtResource("5_sqfk4")
@@ -4401,9 +4402,10 @@ texture_filter = 1
 position = Vector2(154, 17)
 
 [node name="Menu" parent="." instance=ExtResource("6_k70xa")]
+visible = false
 offset_left = -13.0
 offset_top = -3.0
-offset_right = 1271.0
+offset_right = 1281.0
 offset_bottom = 724.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -4446,5 +4448,10 @@ texture_normal = ExtResource("12_invd5")
 position = Vector2(1060, 10)
 scale = Vector2(0.0433589, 0.034375)
 texture_normal = ExtResource("13_2atpr")
+
+[node name="pausa" type="TouchScreenButton" parent="."]
+position = Vector2(953, 5)
+scale = Vector2(0.0463542, 0.0390625)
+texture_normal = ExtResource("14_33gox")
 
 [connection signal="body_entered" from="AreaDown" to="." method="_on_area_down_body_entered"]

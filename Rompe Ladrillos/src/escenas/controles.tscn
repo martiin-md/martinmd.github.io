@@ -1,12 +1,36 @@
-[gd_scene load_steps=8 format=3 uid="uid://2dacxyofj0j5"]
+[gd_scene load_steps=17 format=3 uid="uid://2dacxyofj0j5"]
 
 [ext_resource type="Script" path="res://src/scripts/controles.gd" id="1_2iiow"]
 [ext_resource type="VideoStream" path="res://src/assents/fondoespacial.ogv" id="1_p0kje"]
 [ext_resource type="Texture2D" uid="uid://cng3ybj1u1xnq" path="res://src/assents/controlador/Sprites/flat-light/flatLight22.png" id="2_yj4og"]
 [ext_resource type="Texture2D" uid="uid://yfmhr3oh65ox" path="res://src/assents/controlador/Sprites/flat-light/flatLight23.png" id="3_yfj6e"]
+[ext_resource type="FontFile" uid="uid://6ohc1sy557xe" path="res://src/assents/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="4_1vgjb"]
 [ext_resource type="Texture2D" uid="uid://puc614rf26im" path="res://src/assents/Controllers/addons/controller_icons/assets/key/arrow_left.png" id="4_5o1pd"]
 [ext_resource type="Texture2D" uid="uid://bbjc54bmpv3f8" path="res://src/assents/Controllers/addons/controller_icons/assets/key/arrow_right.png" id="5_8a2fg"]
 [ext_resource type="Texture2D" uid="uid://coqj2fcsaxvcn" path="res://src/assents/Controllers/addons/controller_icons/assets/key/space.png" id="6_c2nmv"]
+[ext_resource type="Texture2D" uid="uid://cnghdqiitl0fu" path="res://src/assents/Controllers/addons/controller_icons/assets/key/esc.png" id="9_l6l16"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qkqbw"]
+font = ExtResource("4_1vgjb")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_owux5"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_dyhsu"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_ubjgo"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_svhus"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_jqfvk"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_y023o"]
+font_size = 20
 
 [node name="controles" type="Control"]
 layout_mode = 3
@@ -40,13 +64,14 @@ texture_normal = ExtResource("2_yj4og")
 
 [node name="titulo" type="Label" parent="."]
 layout_mode = 0
-offset_left = 505.0
-offset_top = 118.0
-offset_right = 797.0
-offset_bottom = 187.0
+offset_left = 508.0
+offset_top = 121.0
+offset_right = 805.0
+offset_bottom = 191.0
 theme_override_font_sizes/font_size = 50
 text = "CONTROLES
 "
+label_settings = SubResource("LabelSettings_qkqbw")
 
 [node name="izquierda" type="Label" parent="."]
 layout_mode = 0
@@ -55,14 +80,16 @@ offset_top = 348.0
 offset_right = 944.0
 offset_bottom = 375.0
 text = "Izquieda"
+label_settings = SubResource("LabelSettings_owux5")
 
 [node name="derecha" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1040.0
-offset_top = 350.0
-offset_right = 1105.0
-offset_bottom = 373.0
+offset_left = 1011.0
+offset_top = 348.0
+offset_right = 1092.0
+offset_bottom = 376.0
 text = "Derecha"
+label_settings = SubResource("LabelSettings_dyhsu")
 
 [node name="izquierdaImg" type="TouchScreenButton" parent="."]
 position = Vector2(880, 382)
@@ -70,7 +97,7 @@ scale = Vector2(0.825, 0.725)
 texture_normal = ExtResource("2_yj4og")
 
 [node name="DerechaImg" type="TouchScreenButton" parent="."]
-position = Vector2(1042, 382)
+position = Vector2(1022, 382)
 scale = Vector2(0.825, 0.725)
 texture_normal = ExtResource("3_yfj6e")
 
@@ -84,18 +111,22 @@ theme_override_font_sizes/font_size = 20
 text = "Móviles"
 
 [node name="izquierda2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 228.0
 offset_top = 350.0
 offset_right = 294.0
 offset_bottom = 377.0
 text = "Izquieda"
+label_settings = SubResource("LabelSettings_ubjgo")
 
 [node name="derecha2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 390.0
 offset_top = 352.0
 offset_right = 455.0
 offset_bottom = 375.0
 text = "Derecha"
+label_settings = SubResource("LabelSettings_svhus")
 
 [node name="izquierdaImg2" type="TouchScreenButton" parent="."]
 position = Vector2(220, 384)
@@ -108,6 +139,7 @@ scale = Vector2(0.825, 0.725)
 texture_normal = ExtResource("5_8a2fg")
 
 [node name="labelPC" type="Label" parent="."]
+layout_mode = 0
 offset_left = 328.0
 offset_top = 288.0
 offset_right = 354.0
@@ -117,13 +149,28 @@ text = "PC"
 
 [node name="reiniciar" type="Label" parent="."]
 layout_mode = 0
-offset_left = 302.0
-offset_top = 460.0
-offset_right = 373.0
-offset_bottom = 486.0
+offset_left = 216.0
+offset_top = 485.0
+offset_right = 300.0
+offset_bottom = 513.0
 text = "Reiniciar"
+label_settings = SubResource("LabelSettings_jqfvk")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(287, 461)
+position = Vector2(310, 456)
+scale = Vector2(1.12, 0.93)
 texture_normal = ExtResource("6_c2nmv")
+
+[node name="pausar" type="TouchScreenButton" parent="."]
+position = Vector2(303, 518)
+texture_normal = ExtResource("9_l6l16")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 551.0
+offset_right = 285.0
+offset_bottom = 584.0
+text = "Pusar"
+label_settings = SubResource("LabelSettings_y023o")
