@@ -49,19 +49,21 @@ Puedes modificar algunas configuraciones dentro del código:
 📌 Personalizar los colores y gráficos del juego
 
 🛠 Estructura del proyecto
+
 📂 src/ → Carpeta principal del código fuente
+│
 ├── 📁 escenas/ → Contiene las escenas (.tscn) del juego
-│ ├── main.tscn → Escena principal del juego
-│ ├── menu.tscn → Menú principal
-│ ├── pausa.tscn → Menú de pausa
-│ ├── settings_menu.tscn → Menú de ajustes
-│ ├── brick.tscn → Escena de los ladrillos
-│ ├── ball.tscn → Escena de la bola
-│ ├── paddle.tscn → Escena de la paleta
-│ ├── game_over.tscn → Pantalla de Game Over
-│ ├── win_screen.tscn → Pantalla de victoria
-│ ├── hud.tscn → Interfaz del jugador (marcador y vidas)
-│ └── ...
+│   ├── 📄 main.tscn → Escena principal del juego
+│   ├── 📄 menu.tscn → Menú principal
+│   ├── 📄 pausa.tscn → Menú de pausa
+│   ├── 📄 settings_menu.tscn → Menú de ajustes
+│   ├── 📄 brick.tscn → Escena de los ladrillos
+│   ├── 📄 ball.tscn → Escena de la bola
+│   ├── 📄 paddle.tscn → Escena de la paleta
+│   ├── 📄 game_over.tscn → Pantalla de Game Over
+│   ├── 📄 win_screen.tscn → Pantalla de victoria
+│   ├── 📄 hud.tscn → Interfaz del jugador (marcador y vidas)
+│   └── ...
 
 📂 scripts/ → Carpeta con los archivos de código en GDScript
 📂 assets/ → Carpeta con imágenes, sonidos y música
