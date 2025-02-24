@@ -67,10 +67,10 @@ Puedes modificar algunas configuraciones dentro del código:
 📂 assets/ → Carpeta con imágenes, sonidos y música
 
 🎵 Créditos
-Programación y diseño: [Tu Nombre]
+Programación y diseño: Martín Miroslavov Dimitrov
 Motor del juego: Godot 4.3
 Música y efectos: [Fuentes de los sonidos, si usaste libres de derechos]
-Gráficos: [Creados por ti o fuentes utilizadas]
+Gráficos: 
 📜 Licencia
 Este juego es de código abierto bajo la licencia MIT. Puedes modificarlo, compartirlo y adaptarlo según necesites.
 
