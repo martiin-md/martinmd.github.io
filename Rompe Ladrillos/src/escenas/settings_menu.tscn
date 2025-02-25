@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3rt6c7scri5s"]
 
 [ext_resource type="Script" path="res://src/scripts/settings_menu.gd" id="1_1k4f8"]
-[ext_resource type="VideoStream" path="res://src/assents/fondoespacial.ogv" id="2_g1lpx"]
 [ext_resource type="AudioStream" uid="uid://dj3wims3u57y0" path="res://src/sonidos/Bittersweet_Anthem_BGM_CC-BY.mp3" id="2_j06f3"]
+[ext_resource type="PackedScene" uid="uid://dejw2sfstm7nr" path="res://src/fondoEspaciol.tscn" id="2_vpy6m"]
 [ext_resource type="Texture2D" uid="uid://cng3ybj1u1xnq" path="res://src/assents/controlador/Sprites/flat-light/flatLight22.png" id="4_p2g77"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fe2ce"]
@@ -24,21 +24,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1k4f8")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+[node name="Control" parent="." instance=ExtResource("2_vpy6m")]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -20.0
-offset_right = 24.0
-offset_bottom = 15.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("2_g1lpx")
-autoplay = true
-expand = true
-loop = true
+offset_left = -51.0
+offset_top = -35.0
+offset_right = 55.0
+offset_bottom = 52.0
 
 [node name="atras" type="Button" parent="."]
 layout_mode = 0

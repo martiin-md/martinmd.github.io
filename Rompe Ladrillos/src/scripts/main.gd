@@ -64,17 +64,20 @@ func _on_area_down_body_entered(body: Node2D) -> void:
 		reset_ball()
 
 func count_blocks():
-	total_blocks = get_tree().get_nodes_in_group("blocks").size()
+	total_blocks = $Bricks.get_child_count()
+	print("Bloques totales:", total_blocks)
 
 func block_destroyed():
 	total_blocks -= 1
+	print("Bloques restantes:", total_blocks)
+
 	if total_blocks <= 0:
 		show_win_message()
 
 func show_win_message():
 	print("¡Has ganado!")
 	$WinLabel.visible = true  
-	await get_tree().create_timer(2.0).timeout  
+	await get_tree().create_timer(2.0).timeout 
 	restart_game()
 
 func show_game_over():
@@ -105,35 +108,25 @@ func restart_game():
 func reset_blocks():
 	var bloques_container = $Bricks
 
-	# Se elimina todos los bloques antes de crear nuevos
-	print("Eliminando bloques...")
+	# Eliminar bloques anteriores
 	for block in bloques_container.get_children():
 		block.queue_free()
-	
 
-
-	#  CargO la escena de los bloques
-	var brick_scene = load("res://src/escenas/brick.tscn")  # Ajusta si la ruta es diferente
-
-	# Variables para organizar los bloques correctamente
-	var columnas = 13  # Ajusta según el diseño de la imagen
+	# Cargar y crear nuevos bloques
+	var brick_scene = load("res://src/escenas/brick.tscn")
+	var columnas = 13
 	var filas = 4
-	var bloque_ancho = 64  # Ajusta según el tamaño de tus bloques
+	var bloque_ancho = 64
 	var bloque_alto = 32
-	var espacio_x = 20  # MAS espacio entre bloques horizontal
-	var espacio_y = 15  # MAS espacio entre bloques vertical
-	var margen_x = 190  # Ajuste para centrar los bloques
-	var margen_y = 80  # Ajuste para que no estén pegados arriba
+	var espacio_x = 20
+	var espacio_y = 15
+	var margen_x = 190
+	var margen_y = 80
 
-	#  Se calcula la posición inicial para centrar los bloques
 	var pantalla_ancho = get_viewport().get_visible_rect().size.x
 	var inicio_x = (pantalla_ancho - (columnas * (bloque_ancho + espacio_x))) / 2
 	var inicio_y = margen_y
 
-	print("Tamaño pantalla:", pantalla_ancho)
-	print("Espacio entre bloques X:", espacio_x, " Y:", espacio_y)
-
-	# 🔹 Crear bloques alineados con espacio entre ellos
 	for i in range(filas):  
 		for j in range(columnas):
 			var new_brick = brick_scene.instantiate()
@@ -142,7 +135,9 @@ func reset_blocks():
 				inicio_y + i * (bloque_alto + espacio_y)
 			)
 			bloques_container.add_child(new_brick)
-			print("Bloque en:", new_brick.position)  # Ver posición exacta en consola
+
+			# 🔹 Conectar la señal cuando se destruye un bloque
+			new_brick.brick_destroyed.connect(block_destroyed)
 
 	count_blocks()  # Actualiza el número de bloques
 

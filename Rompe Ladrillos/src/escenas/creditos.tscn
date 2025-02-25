@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dk5rqbqycu3v8"]
 
-[ext_resource type="VideoStream" path="res://src/assents/fondoespacial.ogv" id="1_7debw"]
 [ext_resource type="Script" path="res://src/scripts/creditos.gd" id="1_wd2be"]
+[ext_resource type="PackedScene" uid="uid://dejw2sfstm7nr" path="res://src/fondoEspaciol.tscn" id="2_784xq"]
 [ext_resource type="Texture2D" uid="uid://cng3ybj1u1xnq" path="res://src/assents/controlador/Sprites/flat-light/flatLight22.png" id="2_nik8m"]
 
 [sub_resource type="GDScript" id="GDScript_dtqqd"]
@@ -27,21 +27,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wd2be")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+[node name="Control" parent="." instance=ExtResource("2_784xq")]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -20.0
-offset_right = 24.0
-offset_bottom = 15.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("1_7debw")
-autoplay = true
-expand = true
-loop = true
+offset_left = -68.0
+offset_top = -30.0
+offset_right = 80.0
+offset_bottom = 48.0
 
 [node name="creador" type="Label" parent="."]
 layout_mode = 0

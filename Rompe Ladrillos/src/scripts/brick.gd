@@ -1,21 +1,17 @@
 extends StaticBody2D
 
+# Señal para notificar la destrucción del bloque
+signal brick_destroyed
+
 # Método que destruye el bloque o ladrillo.
 func destroy_brick():
-	# Desactiva el área de colisión del CollisionShape2D para que el bloque deje de detectar colisiones.
 	$CollisionShape2D.set_deferred("disabled", true)
 	
-	# Se crea una instancia de Tween, que es un nodo para realizar animaciones.
 	var tween: Tween = get_tree().create_tween()
-	
-	# Animacón de  la propiedad "modulate:a" (la transparencia alfa) de este objeto (self) a 0.0 en 0.5 segundos.
-	# Esto hace que el bloque se desvanezca visualmente.
 	tween.tween_property(self, "modulate:a", 0.0, 0.5)
-	
-	# Después de completar la animación, ejecuta el método `finish_animation()`.
 	tween.tween_callback(finish_animation)
 
 # Método que se llama cuando la animación de destrucción termina.
 func finish_animation():
-	# Elimina el nodo del árbol de nodos, lo que significa que el bloque es destruido por completo.
+	emit_signal("brick_destroyed")  # 🔹 Notifica que el bloque fue destruido
 	queue_free()

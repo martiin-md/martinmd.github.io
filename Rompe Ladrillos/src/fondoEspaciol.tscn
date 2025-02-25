@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dejw2sfstm7nr"]
+
+[ext_resource type="VideoStream" path="res://src/assents/fondoEspacio2.ogv" id="1_j3gff"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_left = -148.0
+offset_top = -70.0
+offset_right = 1486.0
+offset_bottom = 832.0
+stream = ExtResource("1_j3gff")
+autoplay = true
+expand = true
+loop = true
+buffering_msec = 50
