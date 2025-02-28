@@ -20,7 +20,6 @@ func _on_exit_button_pressed() -> void:
 # En el menú principal
 func _on_settings_button_pressed() -> void:
 	# Cargar la escena de ajustes
-	var settings_scene = preload("res://src/escenas/settings_menu.tscn")
-	var settings_instance = settings_scene.instance()
-	get_tree().current_scene.add_child(settings_instance)  # Se agrega la escena de ajustes
-	settings_instance.rect_position = Vector2(100, 100)  # posición inicial de la escena
+	var settings_scene = preload("res://src/escenas/settings_menu.tscn").instantiate()
+	get_tree().current_scene.add_child(settings_scene)
+	settings_scene.position = Vector2(100, 100)

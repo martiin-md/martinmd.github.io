@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3rt6c7scri5s"]
 
 [ext_resource type="Script" path="res://src/scripts/settings_menu.gd" id="1_1k4f8"]
-[ext_resource type="AudioStream" uid="uid://dj3wims3u57y0" path="res://src/sonidos/Bittersweet_Anthem_BGM_CC-BY.mp3" id="2_j06f3"]
+[ext_resource type="AudioStream" uid="uid://dj3wims3u57y0" path="res://src/sounds/Bittersweet_Anthem_BGM_CC-BY.mp3" id="2_j06f3"]
 [ext_resource type="PackedScene" uid="uid://dejw2sfstm7nr" path="res://src/fondoEspaciol.tscn" id="2_vpy6m"]
 [ext_resource type="Texture2D" uid="uid://cng3ybj1u1xnq" path="res://src/assents/controlador/Sprites/flat-light/flatLight22.png" id="4_p2g77"]
 

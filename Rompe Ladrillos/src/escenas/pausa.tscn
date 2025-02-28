@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ca1xc0uri7l8p"]
+[gd_scene load_steps=7 format=3 uid="uid://ca1xc0uri7l8p"]
 
 [ext_resource type="FontFile" uid="uid://6ohc1sy557xe" path="res://src/assents/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/architect-s-daughter/ArchitectsDaughter.ttf" id="1_47qbg"]
 [ext_resource type="Script" path="res://src/scripts/pausa.gd" id="1_d62tp"]
@@ -6,9 +6,6 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxn38"]
 bg_color = Color(0.230369, 0.697383, 0.48429, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mir8k"]
-bg_color = Color(0, 0, 0.52, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fy7mi"]
 bg_color = Color(0.6, 0.114, 0.114, 1)
@@ -52,13 +49,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_dxn38")
 text = "REANUDAR"
-
-[node name="ajustes" type="Button" parent="VBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_mir8k")
-text = "AJUSTES"
 
 [node name="salir" type="Button" parent="VBoxContainer"]
 texture_filter = 1

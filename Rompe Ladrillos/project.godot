@@ -20,7 +20,7 @@ config/windows_native_icon="res://src/art/Rompe Ladrillos.png"
 
 [audio]
 
-volume_master=-26.0
+volume_master=-18.0
 
 [autoload]
 

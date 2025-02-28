@@ -15,7 +15,7 @@ func _ready() -> void:
 	$reinicio.hide()
 	count_blocks()  
 	update_lives_display()
-	$Menu/ajustes.pressed.connect(_on_settings_pressed)
+	$ajustes.pressed.connect(_on_settings_pressed)
 	$reinicio.pressed.connect(_on_restart_pressed)
 	$ajustes.pressed.connect(_on_settings_pressed)
 	$pausa.pressed.connect(_on_pause_pressed)
