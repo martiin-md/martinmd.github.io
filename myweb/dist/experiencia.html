@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mi Portafolio</title>
+    <link rel="stylesheet" href="/experiencia.22c83931.css">
+
+    <!-- Font Awesome para iconos -->
+    <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- Encabezado con el menú -->
+    <header>
+      <!-- Menú de navegación -->
+      <div class="navbar">
+        <div class="menu-content">
+          <a href="/index.html#home" class="menu-item">Inicio</a>
+          <a href="/index.html#projects" class="menu-item">Proyectos</a>
+          <a href="/Martin%20Miroslavov%20Dimitrov%20CV.pdf" class="menu-item">Descargar CV</a>
+
+          <!-- Menú de idiomas -->
+          <div class="language-menu">
+            <button class="language-button">Idioma</button>
+            <div class="language-content">
+              <a href="#" onclick="changeLanguage('es')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="Español" class="language-icon">
+              </a>
+              <a href="#" onclick="changeLanguage('en')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg" alt="English" class="language-icon">
+              </a>
+            </div>
+          </div>
+
+          <!-- Menú desplegable -->
+          <div class="more-options-menu">
+            <button class="more-options-button">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="more-options-content">
+              <a href="#contact">Contacto</a>
+              <a href="/Martin%20Miroslavov%20Dimitrov%20CV.pdf" target="_blank">
+                Descargar CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sección de Contacto -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h1>¡Pongámonos en Contacto!</h1>
+        <p>
+          Si tienes alguna consulta, duda o simplemente deseas charlar sobre
+          futuros proyectos, no dudes en enviarme un mensaje. ¡Estoy disponible
+          para nuevas oportunidades!
+        </p>
+
+        <!-- Formulario de contacto -->
+        <form id="contactForm" action="https://formspree.io/f/xldgqnlb" method="POST">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required="">
+          </div>
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required="">
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" required=""></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+
+        <!-- Enlaces de contacto rápido -->
+        <div class="social-links">
+          <h3>También puedes contactarme a través de mis redes sociales:</h3>
+          <a href="https://www.linkedin.com/in/martin-miroslavov-dimitrov/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/martiin-md/martinmd.github.io" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:miroslavovdimitrovmartin@gmail.com">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.instagram.com/martiin.md/?__pwa=1" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+      <p>&copy; 2025 Martin Miroslavov Dimitrov.</p>
+    </footer>
+
+    <script src="/index.f68744d1.js" defer=""></script>
+  <script src="/experiencia.0b028a3a.js"></script></body>
+</html>

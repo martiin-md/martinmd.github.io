@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Miroslavov Dimitrov</title>
+    <link rel="stylesheet" href="/index.4d663569.css">
+
+    <script src="/index.f68744d1.js" defer=""></script>
+    <script src="/index.d0b9957b.js" defer=""></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  </head>
+  <body>
+    <!-- Menú de navegación -->
+    <div class="navbar">
+      <div class="menu-content">
+        <a href="#home" class="menu-item" id="nav-home">Inicio</a>
+        <a href="#about" class="menu-item" id="nav-about">Sobre mí</a>
+        <a href="#projects" class="menu-item" id="nav-projects">Proyectos</a>
+        <a href="#contact" class="menu-item" id="nav-contact">Contacto</a>
+
+        <div class="language-menu">
+          <button id="language-button" class="language-button">Idioma</button>
+          <div class="language-content">
+            <a href="#" onclick="changeLanguage('es')">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/2560px-Flag_of_Spain.svg.png" alt="Español" class="language-icon">
+            </a>
+            <a href="#" onclick="changeLanguage('en')">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/383px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="English" class="language-icon">
+            </a>
+          </div>
+        </div>
+
+        <!-- Nuevo menú (icono para abrir opciones) -->
+        <div class="more-options-menu">
+          <button id="more-options-button" class="more-options-button">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="more-options-content">
+            <a href="/contactar.html" id="menu-contactar">Contactar</a>
+            <a href="/Martin%20Miroslavov%20Dimitrov%20CV.pdf" alt="CV de Martin Miroslavov Dimitrov" target="_blank" id="menu-download-cv">Descargar CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <header id="home">
+        <img src="/Martin.4b63ce67.png" alt="Foto de Martin" class="profile-pic">
+
+        <h2 id="name">Martin Miroslavov Dimitrov</h2>
+        <p id="job">
+          Programador Mobile | Técnico de Redes | Diseñador UI/UX | Freelancer
+        </p>
+        <p id="entrepreneur"><b>Joven Emprendedor</b></p>
+      </header>
+
+      <!-- Sección Sobre mí -->
+      <section id="about">
+        <div class="about-content">
+          <h2 id="about-title">Sobre mí</h2>
+          <p id="about-description">
+            Soy un Programador y experto en Trading donde además tengo pasión por
+            la tecnología y el desarrollo de aplicaciones móviles. Con
+            experiencia en diversas plataformas como Android (Java y Kotlin), y
+            con conocimientos en desarrollo web, diseño UI/UX y redes. Siempre
+            en búsqueda de nuevas oportunidades y proyectos interesantes.
+          </p>
+          <h3 id="skills-title">Habilidades</h3>
+          <ul>
+            <li id="skill-1">
+              Desarrollo de aplicaciones móviles (Android, Java, Kotlin)
+            </li>
+            <li id="skill-2">Diseño UI/UX</li>
+            <li id="skill-3">Desarrollo de backend (Node.js, Firebase)</li>
+            <li id="skill-4">Gestión de proyectos ágiles</li>
+            <li id="skill-5">Trabajo en equipo y colaboración remota</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 id="projects-title">Proyectos Destacados</h2>
+        <ul id="project-list">
+          <li>
+            <a href="https://github.com/martiin-md/martinmd.github.io/tree/main/SoundStation" target="_blank">
+              <img src="/logosSoundStation.7d040ade.jpg" alt="Gestión de Música" class="project-img">
+              <strong id="project1-title">Aplicación de Gestión de Música</strong>:
+              <span id="project1-description">
+                Desarrollada con Kotlin y Java. Permite gestionar listas y
+                canciones desde un servidor con Firebase. En desarrollo.
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/martiin-md/martinmd.github.io/tree/main/Rompe%20Ladrillos" target="_blank">
+              <img src="/Rompe%20Ladrillos.60291100.png" alt="Juego Móvil de Romper Ladrillos" class="project-img">
+              <strong id="project2-title">Juego Móvil Romper Ladrillos</strong>:
+              <span id="project2-description">
+                Creado para Android con Godot 4.3. Versión clásica del arcade
+                "Breakout". Controla una paleta y destruye bloques.
+              </span>
+            </a>
+          </li>
+
+        
+        <li>
+          <a href="https://github.com/martiin-md/martinmd.github.io/tree/main/IAchatBotApp_MartinMd" target="_blank">
+            <img src="/chatBotImg.47b65b4f.jpeg" alt="Aplicación de IA-CHAT-BOT" class="project-img">
+            <strong id="project3-title">IAchatBotApp</strong>:
+            <span id="project3-description">
+              Es una Aplicación donde hablas con la Inteligencia Artificial y
+              te responde a tus necesidades.
+              Desarollada en AppInventor.mit.edu
+            </span>
+          </a>
+        </li>
+
+        </ul>
+
+        <!-- Botón para mostrar más proyectos -->
+        <button id="toggle-projects" class="toggle-btn">
+          ▼ Ver más proyectos
+        </button>
+
+        <!-- Sección oculta con más proyectos -->
+        <ul id="more-projects" class="hidden">
+          <li>
+            <a href="https://github.com/martiin-md/martinmd.github.io/tree/main/ProyectoMVC_Martin" target="_blank">
+              <strong id="project4-title">Base Datos Concesionario</strong>:
+              <span id="project4-description">
+                Se gestiona una base de datos sobre un Concesionario hecha en Java con Maven
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://github.com/martiin-md/martinmd.github.io/tree/main/android-media-controller-master" target="_blank">
+              <strong id="project5-title">Controlador de Música</strong>:
+              <span id="project5-description">
+                Una Aplicación donde te permite basarte en el control de la música (Te sirve de ayuda para futuros proyectos del mundo de la música)
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Sección de Lenguajes de Programación -->
+      <section id="languages">
+        <div class="languages-content">
+          <h2 id="languages-title">Lenguajes de Programación</h2>
+          <p id="languages-description">
+            A lo largo de mi carrera, he trabajado con varios lenguajes de
+            programación, cada uno con su propósito y aplicación. Algunos de los
+            lenguajes que más utilizo son:
+          </p>
+          <div class="grid-container">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/182px-Java_programming_language_logo.svg.png" alt="Java">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ1mIb6vj4_ZvC9RSM8NmSii1qCxXXN57kEA&s" alt="Kotlin">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Godot_icon.svg/2048px-Godot_icon.svg.png" alt="Godot">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML & CSS">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1200px-Python.svg.png" alt="Python">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sql_data_base_with_logo.png/640px-Sql_data_base_with_logo.png" alt="SQL">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png" alt="MongoDB">
+          </div>
+        </div>
+      </section>
+  </div><script src="/myweb.59712999.js"></script></body>
+  
+<!-- Sección de Contacto mejorada en pie de página -->
+<footer id="contact">
+  <div class="footer-container">
+    <div class="footer-content">   
+  
+      <!-- Enlaces sociales -->
+      <section id="contact">
+        <h2 id="footer-connect-title">Conéctate conmigo</h2>
+        <p id="footer-connect-description">
+          ¡Me encantaría saber de ti! Conéctate conmigo a través de mis redes sociales.
+        </p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/martin-miroslavov-dimitrov/" target="_blank">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="https://github.com/martiin-md/martinmd.github.io" target="_blank">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="mailto:miroslavovdimitrovmartin@gmail.com">
+            <i data-lucide="mail"></i>
+          </a>
+          <a href="https://www.instagram.com/martiin.md/?__pwa=1" target="_blank">
+            <i data-lucide="instagram"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Agregar Lucide Icons -->
+      <script src="https://unpkg.com/lucide@latest"></script>
+      <script>lucide.createIcons();
+
+</script>
+  
+      <p class="footer-note" id="footer-note">© 2025 Martin Miroslavov Dimitrov. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+
+</html>
