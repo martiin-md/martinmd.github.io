@@ -142,9 +142,11 @@ func reset_blocks():
 	count_blocks()  # Actualiza el número de bloques
 
 func reset_ball():
-	print("Reubicando bola...")
+	print("Reubicando bola y pala...")
+	reset_paddle()  # Asegurar que la paleta también se reinicia en el centro
 	$Ball.position = $Markets/MarkerBall.position
 	$Ball.start()
+
 
 func reset_paddle():
 	print("Reubicando la pala...")

@@ -10,20 +10,20 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1.0
-offset_top = -3.0
-offset_right = -943.0
-offset_bottom = -561.0
+offset_top = -1.0
+offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jjhgs")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 texture_filter = 1
-scale = Vector2(1.525, 1.375)
+position = Vector2(5, 496)
+scale = Vector2(2.7625, 2.6875)
 texture_normal = ExtResource("2_nchev")
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(141, 0)
-scale = Vector2(1.55, 1.35)
+position = Vector2(1057, 504)
+scale = Vector2(2.65, 2.65)
 texture_normal = ExtResource("3_vjvj5")

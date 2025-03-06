@@ -4383,20 +4383,19 @@ shape = SubResource("RectangleShape2D_smndt")
 
 [node name="ControladorVirtual" parent="." instance=ExtResource("9_s0d4c")]
 texture_filter = 1
-offset_left = 526.0
-offset_top = 603.0
-offset_right = -486.0
-offset_bottom = -5.0
+offset_left = 4.0
+offset_right = -6.0
+offset_bottom = 3.0
 
 [node name="Vidas" parent="." instance=ExtResource("7_nnjqd")]
 texture_filter = 1
 position = Vector2(154, 17)
 
 [node name="Menu" parent="." instance=ExtResource("6_k70xa")]
-offset_left = -13.0
-offset_top = -3.0
-offset_right = 1281.0
-offset_bottom = 724.0
+offset_left = -18.0
+offset_top = 6.0
+offset_right = 171.0
+offset_bottom = 155.0
 
 [node name="WinLabel" type="Label" parent="."]
 visible = false
@@ -4428,7 +4427,7 @@ offset_bottom = -630.0
 script = null
 
 [node name="ajustes" type="TouchScreenButton" parent="."]
-position = Vector2(1165, 8)
+position = Vector2(1159, 15)
 scale = Vector2(0.0370166, 0.0359375)
 texture_normal = ExtResource("12_invd5")
 
