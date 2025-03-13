@@ -1,102 +1,85 @@
 Media Controller Test
 =====================
-Create a simple MediaController that connects to a MediaBrowserService
-in order to test inter-app media controls.
-This tool is described in the Android documentation: [Using the media controller test app](https://developer.android.com/guide/topics/media-apps/audio-app/media-controller-test).
+Cree un MediaController simple que se conecte a un MediaBrowserService para probar los controles multimedia entre aplicaciones. Esta herramienta se describe en la documentación de Android: Uso de la aplicación de prueba del controlador multimedia.
 
-This app works with the Universal Android Music Player sample,
-or any other app that implements the media APIs.
-https://github.com/googlesamples/android-UniversalMusicPlayer
+Esta aplicación funciona con el ejemplo Universal Android Music Player o con cualquier otra aplicación que implemente las API multimedia. https://github.com/googlesamples/android-UniversalMusicPlayer
 
 
-Usage
+Uso
 =====
 
-1. Select an app from the list of those presented.
-   * Only apps that register a service with an intent filter action of
-   "android.media.browse.MediaBrowserService" will be shown.
-2. Select the type of action to perform to start the player. Options are:
-   * Search: Sends the text provided as a search via _prepareFromSearch()_ or
-   _playFromSearch()_.
-   * Media ID: Sends the text provided as a media ID via _prepareFromMediaId()_ or
-   _playFromMediaId()_.
-   * URI: Sends the text provided as a URI via _prepareFromUri()_ or
-   _playFromUri()_.
-   * No Input: Calls the methods _prepare()_ or _play()_ directly.
-3. Text below the ```PREPARE``` and ```PLAY``` buttons updates based on changes to
-   the media player state via _onPlaybackStateChanged_ and _onMetadataChanged_ and
-   includes the current player state reported via _PlaybackStateCompat.getState()_.
-4. Swipe to the left to see typical media controls with the media's art as a
-   background, if provided.
-5. Press ```back``` to return to the list of media apps.
+1. Seleccione una aplicación de la lista.
+* Solo se mostrarán las aplicaciones que registren un servicio con la acción de filtro de intención "android.media.browse.MediaBrowserService".
+2. Seleccione el tipo de acción que se realizará para iniciar el reproductor. Las opciones son:
+* Buscar: Envía el texto como una búsqueda mediante _prepareFromSearch()_ o _playFromSearch()_.
+* ID de medio: Envía el texto como ID de medio mediante _prepareFromMediaId()_ o _playFromMediaId()_.
+* URI: Envía el texto como URI mediante _prepareFromUri()_ o _playFromUri()_.
+* Sin entrada: Llama directamente a los métodos _prepare()_ o _play()_.
+3. El texto debajo de los botones «PREPARE» y «PLAY» se actualiza según los cambios en el estado del reproductor multimedia mediante _onPlaybackStateChanged_ y _onMetadataChanged_, e incluye el estado actual del reproductor, informado mediante _PlaybackStateCompat.getState()_.
+4. Desliza el dedo hacia la izquierda para ver los controles multimedia típicos con el arte multimedia como fondo, si lo hay.
+5. Pulsa «atrás» para volver a la lista de aplicaciones multimedia.
 
-Via ADB
+Vía ADB
 -------
 
-It's also possible to launch the app via ADB and the Activity manager (am).
+También es posible iniciar la aplicación mediante ADB y el Gestor de actividades (AM).
 
-Parameter | Extra Name
+Parámetro | Nombre adicional
 ----------|-----------
-Package name | `com.example.android.mediacontroller.PACKAGE_NAME`
-Search term | `com.example.android.mediacontroller.SEARCH`
-Media ID | `com.example.android.mediacontroller.MEDIA_ID`
+Nombre del paquete | `com.example.android.mediacontroller.PACKAGE_NAME`
+Término de búsqueda | `com.example.android.mediacontroller.SEARCH`
+ID del medio | `com.example.android.mediacontroller.MEDIA_ID`
 URI | `com.example.android.mediacontroller.URI`
 
-To start the app and connect to UAMP:
+Para iniciar la aplicación y conectarse a UAMP:
 
 `adb shell am start -n com.example.android.mediacontroller/.LaunchActivity --es com.example.android.mediacontroller.PACKAGE_NAME "com.example.android.uamp"`
 
-To perform a search with the term "jazz?" one would use:
+Para realizar una búsqueda con el término "jazz?", se debe usar:
 
 `adb shell am start -n com.example.android.mediacontroller/.MediaAppControllerActivity --es com.example.android.mediacontroller.SEARCH "jazz?"`
 
-Verification
+Verificación
 ============
 
-Audio Focus
+Enfoque de audio
 -----------
 
-This app allows for testing how media apps respond to audio focus changes.
+Esta aplicación permite probar cómo responden las aplicaciones multimedia a los cambios de enfoque de audio.
 
-The app allows requesting and abandoning the following types of audio focus:
-
+La aplicación permite solicitar y abandonar los siguientes tipos de enfoque de audio:
 * AUDIOFOCUS_GAIN
 * AUDIOFOCUS_GAIN_TRANSIENT
 * AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK
 
-For more information on audio focus please see
-[Managing Audio Focus](https://developer.android.com/guide/topics/media-apps/audio-focus.html).
+Para obtener más información sobre el enfoque de audio, consulta
+[Administración del enfoque de audio](https://developer.android.com/guide/topics/media-apps/audio-focus.html).
 
-Supported Actions
+Acciones compatibles
 -----------------
 
-This tool displays the supported actions as reported by the MediaSession in the call to
+Esta herramienta muestra las acciones compatibles, según lo informado por MediaSession en la llamada a
 [MediaSessionCompat.setPlaybackState()](https://developer.android.com/reference/android/support/v4/media/session/MediaSessionCompat.html#setPlaybackState(android.support.v4.media.session.PlaybackStateCompat))
-as a list of prepare and play actions on the main screen. For actions that are not declared as
-supported, it also colors the buttons red on the controller screen.
+como una lista de acciones de preparación y reproducción en la pantalla principal. Para las acciones no declaradas como compatibles, también colorea los botones en rojo en la pantalla del controlador.
 
-See the screenshots below for examples.
+Consulta las capturas de pantalla a continuación para ver ejemplos.
 
-Screenshots
+Capturas de pantalla
 ===========
 
-![](screenshots/screenshots.png "Controls, URIs, Playback")
+![](screenshots/screenshots.png "Controles, URIs, Reproducción")
 
-
-License
+Licencia
 =======
 
-Copyright 2017 Google Inc. All rights reserved.
+Copyright 2017 Google Inc. Todos los derechos reservados.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Licencia Apache, versión 2.0 (la "Licencia");
+no puede utilizar este archivo salvo que cumpla con la Licencia.
+Puede obtener una copia de la Licencia en
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
+Salvo que la legislación aplicable lo exija o se acuerde por escrito, el software distribuido bajo la Licencia se distribuye "TAL CUAL",
+SIN GARANTÍAS NI CONDICIONES DE NINGÚN TIPO, ni expresas ni implícitas.
+Consulte la Licencia para conocer el texto específico que rige los permisos y las limitaciones de la misma.
