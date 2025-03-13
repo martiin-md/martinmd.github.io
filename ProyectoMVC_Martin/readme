@@ -1,0 +1,56 @@
+🚗 Concesionario de Vehículos - Gestión de Autos
+
+Concesionario de Vehículos es una aplicación diseñada para administrar la compra, venta y gestión de vehículos en un concesionario. Permite a los usuarios explorar autos disponibles, gestionar inventario y realizar ventas de manera eficiente.
+
+🌟 Características
+
+✅ Registro y gestión de vehículos con detalles como marca, modelo, año y precio.✅ Búsqueda avanzada y filtros para encontrar autos fácilmente.✅ Gestión de clientes y seguimiento de ventas.✅ Interfaz intuitiva y fácil de usar.✅ Reportes de ventas y análisis de inventario.
+
+🛠 Tecnología Utilizada
+
+💻 Lenguaje: Java
+
+🛠 IDE: NetBeans
+
+🗄 Base de Datos: SQLite
+
+🎨 Interfaz Gráfica: Java Swing
+
+🚀 Instalación y Configuración
+
+🔧 Requisitos
+
+Antes de comenzar, asegúrate de tener instalado:
+
+Java JDK ☕
+
+NetBeans IDE 🛠
+
+SQLite 🗄
+
+📥 Pasos para la Instalación
+
+1️⃣ Clona este repositorio:
+
+git clone https://github.com/tu-usuario/concesionario-vehiculos.git
+cd concesionario-vehiculos
+
+2️⃣ Abre NetBeans y carga el proyecto.
+3️⃣ Configura la base de datos SQLite:
+
+Asegúrate de que el archivo de la base de datos concesionario.db esté en la carpeta del proyecto.
+
+Verifica la conexión en DatabaseManager.java y ajusta la ruta si es necesario.
+4️⃣ Compila y ejecuta el proyecto desde NetBeans.
+
+🎭 Uso de la Aplicación
+
+1️⃣ Inicia la aplicación desde NetBeans.2️⃣ Registra nuevos vehículos en el inventario.3️⃣ Filtra y busca autos según necesidades del cliente.4️⃣ Registra clientes y gestiona ventas.5️⃣ Genera reportes y analiza estadísticas de ventas.
+
+🤝 Contribución
+
+Si deseas mejorar la app, sigue estos pasos:1️⃣ Haz un fork del repositorio.2️⃣ Crea una rama con la nueva funcionalidad: git checkout -b nueva-funcionalidad.3️⃣ Realiza cambios y haz commits: git commit -m "Agrega nueva funcionalidad".4️⃣ Envía un pull request. 🚀
+
+📜 Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más información. 📄
