@@ -1,0 +1,61 @@
+🎵 Aplicación de Gestión de Música
+
+Gestión de Música es una aplicación desarrollada en Kotlin y Java que permite a los usuarios crear y gestionar listas de reproducción, agregar canciones y organizar su biblioteca musical de forma sencilla. Utiliza Firebase para almacenar datos en la nube y sincronizar listas en múltiples dispositivos.
+
+🌟 Características
+
+✅ Creación y gestión de listas de reproducción personalizadas.✅ Agregar, eliminar y organizar canciones dentro de las listas.✅ Almacenamiento en la nube con Firebase.✅ Interfaz atractiva y fácil de usar.✅ Sincronización en tiempo real entre dispositivos.✅ Búsqueda rápida de canciones y artistas.
+
+🛠 Tecnología Utilizada
+
+📱 Lenguaje: Kotlin y Java
+
+🔥 Base de Datos: Firebase Firestore
+
+☁️ Autenticación: Firebase Authentication
+
+📦 Almacenamiento: Firebase Storage
+
+🎨 Interfaz de Usuario: Jetpack Compose / XML
+
+🚀 Instalación y Configuración
+
+🔧 Requisitos
+
+Antes de comenzar, asegúrate de tener instalado:
+
+Android Studio 🛠
+
+JDK 11+ ☕
+
+Una cuenta en Firebase 🔥
+
+📥 Pasos para la Instalación
+
+1️⃣ Clona este repositorio:
+
+git clone https://github.com/tu-usuario/gestion-musica.git
+cd gestion-musica
+
+2️⃣ Abre el proyecto en Android Studio.
+3️⃣ Configura Firebase:
+
+Crea un proyecto en Firebase.
+
+Descarga el archivo google-services.json y colócalo en app/.
+
+Habilita Firestore, Authentication y Storage en Firebase Console.
+4️⃣ Sincroniza dependencias en Android Studio.
+5️⃣ Compila y ejecuta la aplicación en un emulador o dispositivo físico.
+
+🎭 Uso de la Aplicación
+
+1️⃣ Inicia sesión con Google o correo electrónico.2️⃣ Crea listas de reproducción personalizadas.3️⃣ Agrega canciones desde la biblioteca o sube archivos de audio.4️⃣ Organiza las canciones dentro de cada lista.5️⃣ Sincroniza cambios automáticamente gracias a Firebase.
+
+🤝 Contribución
+
+Si deseas mejorar la app, sigue estos pasos:1️⃣ Haz un fork del repositorio.2️⃣ Crea una rama con la nueva funcionalidad: git checkout -b nueva-funcionalidad.3️⃣ Realiza cambios y haz commits: git commit -m "Agrega nueva funcionalidad".4️⃣ Envía un pull request. 🚀
+
+📜 Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más información. 📄
