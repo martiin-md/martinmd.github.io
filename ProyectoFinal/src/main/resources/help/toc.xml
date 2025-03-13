@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<toc version="1.0">
+    <tocitem text="Ayuda - Ibiza Event Manager" target="main">
+        <tocitem text="Presentación" target="presentacion"/>
+        <tocitem text="Inicio de Sesión" target="login"/>
+        <tocitem text="Pantalla Principal" target="principal"/>
+        <tocitem text="Gestión de Eventos" target="eventos"/>
+        <tocitem text="Gestión de Artistas" target="artistas"/>
+        <tocitem text="Gestión de Reservas" target="reservas"/>
+        <tocitem text="Gestión de Usuarios" target="usuarios"/>
+    </tocitem>
+</toc>

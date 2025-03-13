@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReservasPorFechas_subreport1" pageWidth="555" pageHeight="802" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="65b0bd69-c653-4cdc-a3ae-ef4411b407dd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" mode="Opaque" backcolor="#FF3333" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" mode="Opaque" forecolor="#FF3333" backcolor="#FF3333" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+    r.id AS ID_Reserva,
+    u.nombre AS Nombre_Usuario,
+    e.nombre AS Nombre_Evento,
+    r.cantidad AS Cantidad_Reservada,
+    r.personas AS Numero_Personas
+FROM reservas r
+JOIN usuarios u ON r.id_usuario = u.id
+JOIN eventos e ON r.id_evento = e.id
+ORDER BY r.id;]]>
+	</queryString>
+	<field name="ID_Reserva" class="java.lang.Integer"/>
+	<field name="Nombre_Usuario" class="java.lang.String"/>
+	<field name="Nombre_Evento" class="java.lang.String"/>
+	<field name="Cantidad_Reservada" class="java.math.BigDecimal"/>
+	<field name="Numero_Personas" class="java.lang.Integer"/>
+	<group name="Nombre_Evento">
+		<groupExpression><![CDATA[$F{Nombre_Evento}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement style="SubTitle" mode="Opaque" x="47" y="13" width="506" height="24" forecolor="#000000" backcolor="#6666FF" uuid="b7877bc1-589b-4fd5-8a6d-ddd0ca942b5b"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Nombre_Evento}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#6666FF" uuid="ea180c72-0db5-4ec9-96b0-522daaf8995c"/>
+				</rectangle>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="132"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" mode="Opaque" x="0" y="13" width="397" height="33" forecolor="#000000" backcolor="#6666FF" uuid="4a157730-f593-49b3-92e9-a48c1a5709bf"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Detalles de Reservas en Cada Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" mode="Opaque" x="0" y="46" width="397" height="22" forecolor="#000000" backcolor="#6666FF" uuid="9eb3c857-449f-41c3-8627-84848a8b6677"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[Reservas-Eventos]]></text>
+			</staticText>
+			<image isUsingCache="true">
+				<reportElement x="397" y="5" width="158" height="65" uuid="d3a861ee-f2bf-4de5-ae62-050d6c9177ea"/>
+				<imageExpression><![CDATA["src/hiIbiza.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="9ce57243-3cf4-43ad-862a-bc7be90d794e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="138" height="15" uuid="9d08753b-9871-45fc-8fdd-387f4baaf31c"/>
+				<text><![CDATA[ID_Reserva]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="19" width="138" height="15" uuid="51cc8a8f-28a5-43eb-a6c6-74bff1285ff7"/>
+				<text><![CDATA[Nombre_Usuario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="138" height="15" uuid="53910bd3-515b-4d47-b6e0-d1f6b69a7d84"/>
+				<text><![CDATA[Cantidad_Reservada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="19" width="138" height="15" uuid="53a65293-465a-430f-8588-a68f2aaddeba"/>
+				<text><![CDATA[Numero_Personas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="14a15320-047a-41ed-a8d9-4310688ab7f3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="138" height="15" forecolor="#000000" backcolor="#6666FF" uuid="28585c04-229e-4817-b550-cdb5d924925d"/>
+				<textFieldExpression><![CDATA[$F{ID_Reserva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="138" y="0" width="138" height="15" forecolor="#000000" backcolor="#6666FF" uuid="2ec2f926-2549-4fc1-bf01-ce03e2119df0"/>
+				<textFieldExpression><![CDATA[$F{Nombre_Usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="138" height="15" forecolor="#000000" backcolor="#6666FF" uuid="3843cc7b-bda9-4a63-adc8-42744dc4dea1"/>
+				<textFieldExpression><![CDATA[$F{Cantidad_Reservada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="414" y="0" width="141" height="15" forecolor="#000000" backcolor="#6666FF" uuid="ae53076a-9e51-4f48-bbd3-6274827cbfa0"/>
+				<textFieldExpression><![CDATA[$F{Numero_Personas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="161" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="ea9652fc-b4fe-4747-b57d-4626132a5e65"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" mode="Opaque" x="433" y="0" width="80" height="20" forecolor="#000000" backcolor="#6666FF" uuid="4230bb76-e6d1-458a-a3a8-49d4d047182b"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" mode="Opaque" x="513" y="0" width="40" height="20" forecolor="#000000" backcolor="#6666FF" uuid="0e754939-ea9a-4daa-8cd3-8916b32ce3ab"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" mode="Opaque" x="0" y="0" width="433" height="20" forecolor="#000000" backcolor="#6666FF" uuid="bc257975-91e6-433b-ad7e-28673c0ac831"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
